@@ -32,11 +32,11 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html">HOME</a></li>
-                     <li><a href="services.html">SERVICES</a></li>
-                    <li><a href="portfolio.html">PORTFOLIO</a></li>
-                     <li><a href="pricing.html">PRICING</a></li>
-                      <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="index.html">NASLOVNA</a></li>
+                     <li><a href="">O REPOZITORIJU</a></li>
+                    <li><a href="">PRETRAŽIVANJE</a></li>
+                     <li><a href="">PREGLEDAVANJE</a></li>
+                      <li><a href="">KONTAKT</a></li>
                 </ul>
             </div>
            
@@ -46,9 +46,7 @@
         
        <section id="home" class="text-center">
          
-               <!-- <div id="carousel-example" class="carousel slide" data-ride="carousel">
-
-                    <!--<div class="carousel-inner">-->
+              
                         <div class="item active">
 
                             <img src="assets/img/ffzg.jpg" alt="" />
@@ -56,81 +54,85 @@
                                 <h4 class="back-light">Dobrodošli na repozitorij radova Filozofskog fakulteta u Zagrebu</h4>
                             </div>
                         </div>
-<!--                        <div class="item">
-                            <img src="assets/img/2.jpg" alt="" />
-                            <div class="carousel-caption ">
-                                <h4 class="back-light">Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc.</h4>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="assets/img/3.jpg" alt="" />
-                            <div class="carousel-caption ">
-                                <h4 class="back-light">Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc.</h4>
-                            </div>
-                        </div>-->
-                    <!--</div>-->
 
-                    <!--<ol class="carousel-indicators">
-                        <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example" data-slide-to="1"></li>
-                        <li data-target="#carousel-example" data-slide-to="2"></li>
-                    </ol>
-                </div>-->
-           
-       </section>
     <!--/.SLIDESHOW END-->
-
-
-        <section id="intro">
             <div class="container">
            <div class="row text-center" >
             <div class="col-md-12">
              
                  <div class="row text-center pad-row  ">
-<div class="col-md-4 col-sm-4 ">
-                        <img class="img-circle" src="assets/img/team1.png" alt="" />
-                           <h3><strong>Jhon Deo Alex</strong> </h3>
-                       <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </p>
-                            <a href="#" class="btn btn-primary" >Read Details</a>
+                     <section id="pricing-one" style="position: inherit">
+            <div class="container">
+           <div class="row text-center pad-row" >
+            <div class="col-md-3 col-sm-3 col-xs-6">
+                        <div class="panel panel-danger">
+                            <div class="panel-heading">
+                             <h4>ZAVRŠNIH RADOVA</h4> 
+                            </div>
+                            <div class="panel-body">
+
+                               <ul class="plan">      
+                                   <li class="price"><strong>10</strong></li>                       
+                           </ul>
+                            </div>
+                            <div class="panel-footer">
+                                <a href="#" class="btn btn-danger ">Pregledaj</a>
+                            </div>
+                        </div>
                     </div>
-                     <div class="col-md-4 col-sm-4 ">
-                        <img class="img-circle" src="assets/img/team2.jpg" alt="" />
-                           <h3><strong>Jhon Deo Alex</strong> </h3>
-                       <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </p>
-                            <a href="#" class="btn btn-primary" >Read Details</a>
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                        <div class="panel panel-success">
+                            <div class="panel-heading">
+                             <h4>DIPLOMSKIH RADOVA</h4> 
+                            </div>
+                            <div class="panel-body">
+
+                               <ul class="plan">      
+                                   <li class="price"><strong>50</strong></li>                       
+                           </ul>
+                            </div>
+                            <div class="panel-footer">
+                                <a href="#" class="btn btn-success ">Pregledaj</a>
+                            </div>
+                        </div>
                     </div>
-                     <div class="col-md-4 col-sm-4" >
-                         <div class="alert alert-success">
-                           <div class="skill-name">CLIENT SATISFACTION 100%</div> 
-                            <div class="progress progress-striped active progress-adjust">
-  <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-    <span class="sr-only">100% Complete</span>
-  </div>
-</div>
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                             <h4>DOKTORSKIH RADOVA</h4> 
+                            </div>
+                            <div class="panel-body">
+
+                               <ul class="plan">      
+                                   <li class="price"><strong>125</strong></li> 
+                           </ul>
+                            </div>
+                            <div class="panel-footer">
+                                <a href="#" class="btn btn-info ">Pregledaj</a>
+                            </div>
                         </div>
-                         <div class="alert alert-danger">
-                           <div class="skill-name">PERFORMANCE DELIVERED 100%</div> 
-                            <div class="progress progress-striped active progress-adjust">
-  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-    <span class="sr-only">100% Complete</span>
-  </div>
-</div>
+                    </div>
+               
+               <div class="col-md-3 col-sm-3 col-xs-6">
+                        <div class="panel panel-danger">
+                            <div class="panel-heading">
+                             <h4>OSTALIH RADOVA</h4> 
+                            </div>
+                            <div class="panel-body">
+
+                               <ul class="plan">      
+                                   <li class="price"><strong>125</strong></li> 
+                           </ul>
+                            </div>
+                            <div class="panel-footer">
+                                <a href="#" class="btn btn-info ">Pregledaj</a>
+                            </div>
                         </div>
-                         <div class="alert alert-info">
-                           <div class="skill-name">DELIVERY DONE 100%</div> 
-                            <div class="progress progress-striped active progress-adjust">
-  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-    <span class="sr-only">100% Complete</span>
-  </div>
-</div>
-                        </div>
-                     </div>
+                    </div>
+               
+               </div>
+        </div>
+        </section>
                       
                  </div>
                 
@@ -138,123 +140,39 @@
                
                </div>
         </div>
-        </section>
+      
 
-    <!--/.INTRO END-->
-      <section id="offer"  >
-           <div class="container">
-           <div class="row   alert alert-info" >
-                 <div class="col-md-8 col-sm-8">
-                      <h1>  Download Deatils Now For Latest Offers</h1>
-                 </div>
-                 <div class="col-md-4 col-sm-4" style="padding-top: 15px;">
-                     <a href="#" class=" btn btn-primary btn-lg">GRAB IT HERE NOW</a> 
-                 </div>
-                          
-               </div>
-               </div>
-      </section>
-      <!--/.OFFFER END-->
-         <section id="just-intro">
-             <div class="container">
-             <div class="row text-center pad-row">
-            <div class="col-md-4  col-sm-4">
-                 <i class="fa fa-desktop fa-5x"></i>
-                            <h4> <strong>Sure Quique Menu</strong> </h4>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </p>
-                       <a href="#" class="btn btn-primary" >Read Details</a>    
-                </div>
-             <div class="col-md-4  col-sm-4">
-                 <i class="fa fa-flask  fa-5x"></i>
-                            <h4> <strong>Sure Quique Menu</strong> </h4>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </p>
-                           <a href="#" class="btn btn-primary" >Read Details</a>
-                </div>
-            <div class="col-md-4  col-sm-4">
-                  <i class="fa fa-pencil  fa-5x"></i>
-                            <h4> <strong>Sure Quique Menu</strong> </h4>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </p>
-                       <a href="#" class="btn btn-primary" >Read Details</a>    
-                </div>
-                    
-            </div>
-                 </div>
-         </section>
-     <!--/.JUST-INTRO END-->
-     <section  class="note-sec" >
-         
-               <div class="container">
-           <div class="row text-center pad-row" >
-            <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 ">
-                <i class="fa fa-quote-left fa-3x"></i>
-               <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-                            </p>
-                </div>
-               </div>
-            </div>   
-           
-       </section>
     <!--/.NOTE END-->
-     <section id="clients"  >
-        
-                
-            <div class="container">
-           <div class="row text-center pad-bottom" >
-            <div class="col-md-12">
-                <img src="assets/img/clients.png" alt="" class="img-responsive" />
-            </div>
-               
-               </div>
-        </div>
-        </section>
-     <!--/.CLIENTS END-->
+
     <section id="footer-sec" >
              
             <div class="container">
            <div class="row  pad-bottom" >
             <div class="col-md-4">
-                <h4> <strong>ABOUT COMPANY</strong> </h4>
+                <h4> <strong>O Filozofskom fakultetu</strong> </h4>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                 Započeo je svoj rad akademske godine 1874/1875. U njegovu je
+                                 sastavu u početku djelovalo 6 katedara (za filozofiju, opću povijest, hrvatsku 
+                                 povijest, slavensku filologiju, klasičnu filologiju latinsku i klasičnu filologiju 
+                                 grčku), bilo je zaposleno 6 profesora, a upisano 26 studenata.
                             </p>
-                <a href="#" >read more</a>
+                            <a href="http://www.ffzg.unizg.hr/povijest.html" target="blank">read more</a>
                 </div>
                <div class="col-md-4">
-                    <h4> <strong>SOCIAL LINKS</strong> </h4>
+                    <h4> <strong>Filozofski fakultet na društvenim mrežama</strong> </h4>
                    <p>
-                     <a href="#"><i class="fa fa-facebook-square fa-3x"  ></i></a>  
-                        <a href="#"><i class="fa fa-twitter-square fa-3x"  ></i></a>  
-                        <a href="#"><i class="fa fa-linkedin-square fa-3x"  ></i></a>  
-                       <a href="#"><i class="fa fa-google-plus-square fa-3x"  ></i></a>  
+                       <a href="https://www.facebook.com/filozofski?fref=ts" target="blank"><i class="fa fa-facebook-square fa-3x"  ></i></a>  
+                       <a href="https://twitter.com/FFZG" target="blank"><i class="fa fa-twitter-square fa-3x"  ></i></a>  
                    </p>
                 </div>
                <div class="col-md-4">
-                   <h4> <strong>OUR LOCATION</strong> </h4>
+                   <h4> <strong>LOKACIJA</strong> </h4>
                             <p>
-                               234/JK , The Wondre Land, <br />
-                               Newyork Street Junction  <br />
-                               JUST USA -10909094
+                                Filozofski fakultet Sveučilišta u Zagrebu<br>
+                                Ivana Lučića 3<br>
+                                HR-10000 Zagreb<br>
                             </p>
-                    <a href="#" class="btn btn-primary" >SEND QUERY</a>
+                    <!--<a href="#" class="btn btn-primary" >SEND QUERY</a>-->
                 </div>
                </div>
             </div>
