@@ -17,11 +17,19 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
-	{
-		$this->load->view('home');
+	public function index(){
+         $this->load->model('Radovi_model');   
+         $zavrsni = $this->Radovi_model->getAllZavrsni();
+         $data['zavrsni'] = $zavrsni;
+         $diplomski = $this->Radovi_model->getAllDiplomski();
+         $data['diplomski'] = $diplomski;
+         $doktorski = $this->Radovi_model->getAllDoktorski();
+         $data['doktorski'] = $doktorski;
+         $ostali = $this->Radovi_model->getAllOstali();
+         $data['ostali'] = $ostali;
+            
+	 $view = $this->load->view('home', $data, true);
+         $data['body'] = $view;
+         $this->load->view('main', $data);
 	}
 }
-
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
