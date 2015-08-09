@@ -48,7 +48,7 @@ class Browse_model extends MY_Model{
                                             <td>'.$discipline[$i]->date.'</td>
                                             <td>'.$discipline[$i]->typename.'</td>
                                             <td>'.$discipline[$i]->mentor.'</td>
-                                            <td>'.$discipline[$i]->summary.'</td>
+                                            <td style="text-align: center;">'.$discipline[$i]->summary.'</td>
                                             <td>'.$discipline[$i]->keywords.'</td>
                                             <td>'.$discipline[$i]->discname.'</td>
                                             <td>'.$discipline[$i]->course.'</td>

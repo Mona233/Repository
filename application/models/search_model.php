@@ -6,7 +6,7 @@ class Search_model extends MY_Model{
   /**
    * search query
    */  
- public function query($title,$author,$mentor,$keywords,$summary,$disc,$course){
+ public function query($title,$author,$mentor,$keywords,$summary,$disc,$course,$date){
      
      $data = array();
 //     if ($date != '') {$data['date'] = $date;}
@@ -17,6 +17,7 @@ class Search_model extends MY_Model{
      if ($course != '') {$data['course'] = $course;}
      if ($summary != '') {$data['summary'] = $summary;}
      if ($disc != '') {$data['discipline'] = $disc;}
+     if ($disc != '') {$data['date'] = $disc;}
 
  
  //var_dump($data);  
@@ -24,8 +25,13 @@ class Search_model extends MY_Model{
   
     if (!empty($data)){
         
-    $query = "SELECT * FROM work WHERE title LIKE '%".$title."%' AND author LIKE '%".$author."%' AND mentor LIKE '%".$mentor."%'"
-            . "AND keywords LIKE '%".$keywords."%' AND summary LIKE '%".$summary."%' AND course LIKE '".$course."%' AND discipline LIKE '".$disc."%'";
+    $query = "SELECT work.*, type_of_work.title AS typename, disciplines.title AS discname, courses.title AS course FROM work 
+                                  JOIN type_of_work ON work.type = type_of_work.id
+                                  JOIN disciplines ON work.discipline = disciplines.id 
+                                  JOIN courses ON work.course = courses.id WHERE work.title LIKE '%".$title."%' AND "
+            . "work.author LIKE '%".$author."%' AND work.mentor LIKE '%".$mentor."%'"
+            . "AND work.keywords LIKE '%".$keywords."%' AND work.summary LIKE '%".$summary."%' AND work.course LIKE '".$course."%' "
+            . "AND work.discipline LIKE '".$disc."%' AND work.date LIKE '".$date."%'";
     
     //echo $query;
     $result = $this->db->query($query);
@@ -37,8 +43,8 @@ class Search_model extends MY_Model{
   /**
    * form query result make datatable
    */
-  public function dataLoad($title,$author,$mentor,$keywords,$summary,$disc,$course){
-    $get = $this->query($title,$author,$mentor,$keywords,$summary,$disc,$course);
+  public function dataLoad($title,$author,$mentor,$keywords,$summary,$disc,$course,$date){
+    $get = $this->query($title,$author,$mentor,$keywords,$summary,$disc,$course,$date);
           $html = '<table class="table table-striped table-bordered table-hover dataTables-example1">
                             <thead>
                                 <tr>
@@ -62,11 +68,11 @@ class Search_model extends MY_Model{
                                             <td>'.$get[$i]->title.'</td>
                                             <td>'.$get[$i]->author.'</td>
                                             <td>'.$get[$i]->date.'</td>
-                                            <td>'.$get[$i]->type.'</td>
+                                            <td>'.$get[$i]->typename.'</td>
                                             <td>'.$get[$i]->mentor.'</td>
-                                            <td>'.$get[$i]->summary.'</td>
+                                            <td style="text-align: center;">'.$get[$i]->summary.'</td>
                                             <td>'.$get[$i]->keywords.'</td>
-                                            <td>'.$get[$i]->discipline.'</td>
+                                            <td>'.$get[$i]->discname.'</td>
                                             <td>'.$get[$i]->course.'</td>
                                             <td>
                                                 <form method="POST" action="'.base_url().'index.php/welcome/searchdownload">

@@ -66,13 +66,13 @@ class Welcome extends CI_Controller {
   */
  public function pickupData(){
     
-//    $convert = $this->input->post('date');
+    $date = $this->input->post('date');
 //    $converted = new DateTime($convert);
     
     
     $title = $this->input->post('title');
     $author = $this->input->post('author');
-    //$date = $converted->format('Y-m-d');
+//    $date = $converted->format('Y-m-d');
     $mentor = $this->input->post('mentor');
     $keywords = $this->input->post('keywords');
     $summary = $this->input->post('summary');
@@ -80,8 +80,8 @@ class Welcome extends CI_Controller {
     $course = $this->input->post('course');
     
     $this->load->model('Search_model');
-    $this->Search_model->query($title,$author,$mentor,$keywords,$summary,$disc,$course);
-    $this->Search_model->dataLoad($title,$author,$mentor,$keywords,$summary,$disc,$course);
+    $this->Search_model->query($title,$author,$mentor,$keywords,$summary,$disc,$course,$date);
+    $this->Search_model->dataLoad($title,$author,$mentor,$keywords,$summary,$disc,$course,$date);
  }
  
 

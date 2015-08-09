@@ -26,7 +26,7 @@
                           </div><br><br>
                      </div>
                      <div class="form-group"><label class="col-lg-2 control-label">Datum</label>
-                          <div class="col-lg-2" > <input type="text" class="datepicker" name="date" value="" id="date"> 
+                          <div class="col-lg-10" > <input type="text" class="form-control" name="date" value="" placeholder = "npr. 2015-01-01" id="date"> 
                           </div><br><br>
                      </div>
 <!--                     <div class="form-group"><label class="col-lg-2 control-label">Vrsta rada</label>
@@ -104,7 +104,13 @@
             course = $('#course').val();
             //console.log(course);
             });
-        
+//        
+//       $('#date').on('change', function(e){
+//            e.preventDefault();
+//            date = $('#date').val();
+//            //console.log(course);
+//            });
+            
         $('#search').on('click', function(e){
             e.preventDefault();
             

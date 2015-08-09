@@ -42,7 +42,7 @@
                                             <td><?= $type[$i]->date ?></td>
                                             <td><?= $type[$i]->typename ?></td>
                                             <td><?= $type[$i]->mentor ?></td>
-                                            <td><?= $type[$i]->summary ?></td>
+                                            <td style="text-align: center;"><?= $type[$i]->summary ?></td>
                                             <td><?= $type[$i]->keywords ?></td>
                                             <td><?= $type[$i]->discname ?></td>
                                             <td><?= $type[$i]->course ?></td>

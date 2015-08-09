@@ -22,7 +22,7 @@
      <link href="<?=base_url();?>assets/css/dataTables/dataTables.tableTools.min.css" rel="stylesheet" />
      <!--DATE PICKER-->
      <link href="<?=base_url();?>assets/css/datepicker/datepicker3.css" rel="stylesheet" />
-     
+
      
      <!-- JAVASCRIPT FILES -->
     <!-- CORE JQUERY  -->
@@ -39,6 +39,7 @@
     <script src="<?=base_url();?>assets/plugins/dataTables/fnFakeRowspan.js"></script>
    <!DATEPICKER-->
    <script src="<?=base_url();?>assets/plugins/datepicker/bootstrap-datepicker.js"></script>
+
 
 </head>
 <body >
