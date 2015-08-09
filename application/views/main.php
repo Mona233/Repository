@@ -2,20 +2,43 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+    <meta name="description" content="repozitorij radova Filozofskog fakulteta u Zagrebu" />
+    <meta name="author" content="Monika Pejicic" />
     <!--[if IE]>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <![endif]-->
     <title>Repozitorij Filozofskog fakulteta Zagreb</title>
     <!-- BOOTSTRAP CORE STYLE CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="<?=base_url();?>assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONTAWESOME STYLE CSS -->
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="<?=base_url();?>assets/css/font-awesome.min.css" rel="stylesheet" />
     <!-- CUSTOM STYLE CSS -->
-    <link href="assets/css/style.css" rel="stylesheet" />    
+    <link href="<?=base_url();?>assets/css/style.css" rel="stylesheet" />    
     <!-- GOOGLE FONT -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <!--DATA TABLE-->
+     <link href="<?=base_url();?>assets/css/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
+     <link href="<?=base_url();?>assets/css/dataTables/dataTables.responsive.css" rel="stylesheet" />
+     <link href="<?=base_url();?>assets/css/dataTables/dataTables.tableTools.min.css" rel="stylesheet" />
+     <!--DATE PICKER-->
+     <link href="<?=base_url();?>assets/css/datepicker/datepicker3.css" rel="stylesheet" />
+     
+     
+     <!-- JAVASCRIPT FILES -->
+    <!-- CORE JQUERY  -->
+    <script src="<?=base_url();?>assets/plugins/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS  -->
+    <script src="<?=base_url();?>assets/plugins/bootstrap.js"></script>
+  <!-- CUSTOM SCRIPTS  -->
+    <script src="<?=base_url();?>assets/js/custom.js"></script>
+    <script src="<?=base_url();?>assets/config.js"></script>
+   <!--DATATABLE-->
+   <script src="<?=base_url();?>assets/plugins/dataTables/jquery.dataTables.js"></script>
+   <script src="<?=base_url();?>assets/plugins/dataTables/dataTables.bootstrap.js"></script>
+   <script src="<?=base_url();?>assets/plugins/dataTables/dataTables.responsive.js"></script>
+    <script src="<?=base_url();?>assets/plugins/dataTables/fnFakeRowspan.js"></script>
+   <!DATEPICKER-->
+   <script src="<?=base_url();?>assets/plugins/datepicker/bootstrap-datepicker.js"></script>
 
 </head>
 <body >
@@ -28,15 +51,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <img src="assets/img/logo.jpg" alt="" />
+                <img src="<?=base_url();?>assets/img/logo.jpg" alt="ffzg_logo" />
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html">NASLOVNA</a></li>
-                     <li><a href="">O REPOZITORIJU</a></li>
-                    <li><a href="">PRETRAŽIVANJE</a></li>
-                     <li><a href="">PREGLEDAVANJE</a></li>
-                      <li><a href="">KONTAKT</a></li>
+                    <li><a href="<?=base_url();?>index.php/welcome">NASLOVNA</a></li>
+                    <li><a href="<?=base_url();?>index.php/welcome/about">O REPOZITORIJU/KONTAKT</a></li>
+                    <li><a href="<?=base_url();?>index.php/welcome/searchview">PRETRAŽIVANJE</a></li>
+                    <li><a href="<?=base_url();?>index.php/welcome/browseview">PREGLEDAVANJE</a></li>
+                    <li><a href="<?=base_url();?>index.php/welcome/uploadview">DODAVANJE RADA</a></li>
+                    
                 </ul>
             </div>
            
@@ -84,12 +108,8 @@
             </div>
     </section>         
     <!--/.FOOTER END-->
-    <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
-    <!-- CORE JQUERY  -->
-    <script src="assets/plugins/jquery-1.10.2.js"></script>
-    <!-- BOOTSTRAP SCRIPTS  -->
-    <script src="assets/plugins/bootstrap.js"></script>
-  <!-- CUSTOM SCRIPTS  -->
-    <script src="assets/js/custom.js"></script>
+   
+   
+   
 </body>
 </html>

@@ -29,12 +29,10 @@
             //SLIDESHOW SCRIPT
             $('.carousel').carousel({
                 interval: 1000 //TIME IN MILLI SECONDS
-            })
-            // PRETTYPHOTO FUNCTION 
-
-            $("a.preview").prettyPhoto({
-                social_tools: false
             });
+           
+
+            
 
        
 

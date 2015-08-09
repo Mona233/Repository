@@ -1,29 +1,28 @@
     <section id="home" class="text-center">
-         
-<!--                <div id="carousel-example" class="carousel slide" data-ride="carousel">
+                         <div id="carousel-example" class="carousel slide" data-ride="carousel">
 
                     <div class="carousel-inner">
                        <div class="item active">
 
-                            <img src="assets/img/ffzg1.jpg" alt="" />
+                            <img src="<?=base_url();?>assets/img/ffzg1.jpg" alt="" />
                             <div class="carousel-caption" >
                                 <h4 class="back-light">Dobrodošli na repozitorij radova Filozofskog fakulteta u Zagrebu</h4>
                             </div>
-                        </div>-->
+                        </div>
 
                         <div class="item">
-                            <img src="assets/img/ffzg1.jpg" alt="" />
+                            <img src="<?=base_url();?>assets/img/ffzg.jpg" alt="" />
                             <div class="carousel-caption ">
                                 <h4 class="back-light">Dobrodošli na repozitorij radova Filozofskog fakulteta u Zagrebu</h4>
                             </div>
                         </div>
                     </div>
 
-<!--                    <ol class="carousel-indicators">
+                  <ol class="carousel-indicators">
                         <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
                         <li data-target="#carousel-example" data-slide-to="0"></li>
                     </ol>
-                </div>-->
+                </div>
            
        </section>
   
@@ -51,7 +50,9 @@
                            </ul>
                             </div>
                             <div class="panel-footer">
-                                <a href="#" class="btn btn-danger ">Pregledaj</a>
+                                <form method="post" action="<?php echo base_url(); ?>index.php/welcome/browseFromHome">
+                                    <button type="submit" name="type" value="= 3" class="btn btn-danger ">Pregledaj</button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -69,7 +70,10 @@
                                 </ul>
                             </div>
                             <div class="panel-footer">
-                                <a href="#" class="btn btn-success ">Pregledaj</a>
+                                <form method="post" action="<?php echo base_url(); ?>index.php/welcome/browseFromHome">
+                                    <button name="type" value="= 1" type="submit" class="btn btn-success ">Pregledaj</button>
+                                </form>
+                                
                             </div>
                         </div>
                     </div>
@@ -87,7 +91,9 @@
                                 </ul>
                             </div>
                             <div class="panel-footer">
-                                <a href="#" class="btn btn-info ">Pregledaj</a>
+                               <form method="post" action="<?php echo base_url(); ?>index.php/welcome/browseFromHome">
+                                   <button type="submit" name="type" value=" = 2" class="btn btn-info ">Pregledaj</button>
+                               </form>
                             </div>
                         </div>
                     </div>
@@ -106,7 +112,9 @@
                                 </ul>
                             </div>
                             <div class="panel-footer">
-                                <a href="#" class="btn btn-danger ">Pregledaj</a>
+                                <form method="post" action="<?php echo base_url(); ?>index.php/welcome/browseFromHome">
+                                    <button type="submit" name="type" value="NOT IN (1,2,3)" class="btn btn-danger ">Pregledaj</button>
+                                </form>
                             </div>
                         </div>
                     </div>

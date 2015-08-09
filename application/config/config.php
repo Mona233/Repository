@@ -16,7 +16,7 @@
 | environments.
 |
 */
-$config['base_url'] = '';
+$config['base_url'] = 'http://localhost/Repository/';
 
 /*
 |--------------------------------------------------------------------------
@@ -358,6 +358,12 @@ $config['rewrite_short_tags'] = FALSE;
 |
 */
 $config['proxy_ips'] = '';
+
+
+/*
+ * upload config
+ */
+
 
 
 /* End of file config.php */
