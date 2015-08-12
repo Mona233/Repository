@@ -16,6 +16,7 @@ class Work_model extends MY_Model{
     public $discipline;
     public $path;
     public $course;
+    public $user;
   
   /**
    * catch all work where type is 3 = zavrsni

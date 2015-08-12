@@ -16,7 +16,7 @@
              <div class="row text-center pad-row">
             
                  <div class="ibox-content">
-<!--                     <form method="post" action="<?php echo base_url(); ?>index.php/welcome/pickupData">-->
+<!--                     <form method="post" action="<?php //echo base_url(); ?>index.php/welcome/pickupData">-->
                      <div class="form-group"><label class="col-lg-2 control-label">Naslov</label>
                           <div class="col-lg-10" ><input type="text" class="form-control" name="title" id="title"> 
                           </div><br><br>

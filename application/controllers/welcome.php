@@ -250,9 +250,28 @@ class Welcome extends CI_Controller {
  * load the upload view
  */ 
  public function uploadview(){
-  $this->load->view('upload',array('error' => ' ' ));
-//  $data['body'] = $view;
-//  $this->load->view('main', $data);
+     
+   //get all work types
+     $this->load->model('TypeOfWork_model');
+     $type = new TypeOfWork_model();
+     $types = $type->getAllTypes();
+     $data['type'] = $types;
+      
+      //get all disciplines
+     $this->load->model('Disciplines_model');
+     $discipline = new Disciplines_model();
+     $disciplines = $discipline->getAllDisciplines();
+     $data['discipline'] = $disciplines;
+     
+     //get all courses
+     $this->load->model('Course_model');
+     $course = new Course_model();
+     $courses = $course->getAllCourses();
+     $data['course'] = $courses;
+     
+  $view = $this->load->view('upload',$data,TRUE);
+  $data['body'] = $view;
+  $this->load->view('main', $data);
      
  }
  
@@ -261,20 +280,63 @@ class Welcome extends CI_Controller {
  */
  public function upload(){
     $config = array(
-    'upload_path' => "assets/radovi",
-    'allowed_types' => "gif|jpg|png|jpeg|pdf|doc|txt",
+    'upload_path' => "./uploads/",
+    'allowed_types' => "gif|jpg|png|jpeg|pdf|doc|docx|txt|mp3|mp4|zip|rar",
     'overwrite' => TRUE,
-    'max_size' => "2048000", // Can be set to particular file size , here it is 2 MB(2048 Kb)
+    'max_size' => "5048000",
     'max_height' => "768",
     'max_width' => "1024"
     );
+    
+    if (!file_exists($config['upload_path'])) {
+          if (!mkdir($config['upload_path'], 0777, true)) {
+          die('Failed to create folders...');
+            }
+        }
     $this->load->library('upload', $config);
-    if($this->upload->do_upload()){
-        $data = array('upload_data' => $this->upload->data());
-        $this->load->view('upload_success',$data);
-       }else{
-    $error = array('error' => $this->upload->display_errors());
-    $this->load->view('upload', $error);
-         }
-      }
+    $this->upload->initialize($config);
+    if($this->upload->do_upload('upload')){
+        //$data = array('upload_data' => $this->upload->data());
+        $view = $this->load->view('upload_success',array("page" => base_url() . "index.php/welcome/uploadview"), TRUE);//$data);
+        $data['body'] = $view;
+        $this->load->view('main', $data);
+        
+        //insert into database
+        $this->load->model('Work_model');
+        $work = new Work_model();
+        $new = $this->input->post('newCourse');
+        
+        $work->title = $this->input->post('title');
+        $work->author = $this->input->post('author');
+        $work->date = $this->input->post('date');
+        $work->mentor = $this->input->post('mentor');
+        $work->keywords = $this->input->post('keywords');
+        $work->summary = $this->input->post('summary');
+        $work->discipline = $this->input->post('discipline');
+        $work->type = $this->input->post('type');
+        
+        $upload_data = $this->upload->data();
+        $file_name = $upload_data['file_name'];
+        $file = str_replace('', '_', $file_name);
+        $work->path = $file;
+        
+           if(!empty($new)){
+            $this->load->model('Course_model');
+            $course = new Course_model();
+            $course->title = $new;
+            $course->save();
+            $course2 = $this->db->insert_id();
+            $work->course = $course2;
+             }else{
+            $work->course = $this->input->post('course');
+            }
+         $work->save();
+          }else{
+                $error = array('error' => $this->upload->display_errors());
+//                var_dump($data);
+                $view = $this->load->view('upload',$error,TRUE);
+                $data['body'] = $view;
+                $this->load->view('main', $data);
+                }
+      }  
 }
