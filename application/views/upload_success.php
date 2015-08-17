@@ -4,17 +4,10 @@
     ?>
 
    <input type = "hidden" id = "page" value = "<?= $page ?>">
-   <div id = "wrapper">
-       <br>
-       <br>
-       <br>
-       <br>
-       <br>
-       <br>
-      
-
+   <div id = "wrapper" style="margin-top: 200px; margin-bottom: 200px;">
+   
        
-       <div class = "alert alert-success" style="text-align: center">Uspješno ste predali svoj rad! Kontaktirati ćemo Vas uskoro.<br>
+       <div class = "alert alert-info" style="text-align: center">Uspješno ste predali svoj rad! Kontaktirati ćemo Vas uskoro.<br>
                     <span style = "margin-left:50px;"> Povratak... </span>
                 </div>
 
@@ -26,22 +19,6 @@
                 </ul> -->
             
   </div>
-     <br>
-     <br>
-     <br>
-     <br>
-     <br>
-     <br>
-     <br>
-     <br>
-     <br>
-     <br>
-     <br>
-     <br>
-     <br>
-     <br>
-     <br>
-     <br>
    
 
     <!--Mainly scripts -->

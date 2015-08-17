@@ -54,6 +54,18 @@
                 </button>
                 <img src="<?=base_url();?>assets/img/logo.jpg" alt="ffzg_logo" />
             </div>
+            <?php if ($this->uri->total_segments() == 0){?>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">NASLOVNA</a></li>
+                    <li><a href="#">O REPOZITORIJU/KONTAKT</a></li>
+                    <li><a href="#">PRETRAŽIVANJE</a></li>
+                    <li><a href="#">PREGLEDAVANJE</a></li>
+                    <li><a href="#">DODAVANJE RADA</a></li>
+                    
+                </ul>
+            </div>
+            <?php } else { ?>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="<?=base_url();?>index.php/welcome">NASLOVNA</a></li>
@@ -64,7 +76,7 @@
                     
                 </ul>
             </div>
-           
+            <?php } ?>
         </div>
     </div>
    <!--/.NAVBAR END-->

@@ -37,7 +37,7 @@
            <div class="row text-center pad-row" >
                
             <div class="col-md-3 col-sm-3 col-xs-6">
-                        <div class="panel panel-danger">
+                        <div class="panel panel-info">
                             <div class="panel-heading">
                              <h4>ZAVRŠNIH RADOVA</h4> 
                             </div>
@@ -51,14 +51,14 @@
                             </div>
                             <div class="panel-footer">
                                 <form method="post" action="<?php echo base_url(); ?>index.php/welcome/browseFromHome">
-                                    <button type="submit" name="type" value="= 3" class="btn btn-danger ">Pregledaj</button>
+                                    <button type="submit" name="type" value="= 3" class="btn btn-info ">Pregledaj</button>
                                 </form>
                             </div>
                         </div>
                     </div>
                
                 <div class="col-md-3 col-sm-3 col-xs-6">
-                        <div class="panel panel-success">
+                        <div class="panel panel-info">
                             <div class="panel-heading">
                              <h4>DIPLOMSKIH RADOVA</h4> 
                             </div>
@@ -71,7 +71,7 @@
                             </div>
                             <div class="panel-footer">
                                 <form method="post" action="<?php echo base_url(); ?>index.php/welcome/browseFromHome">
-                                    <button name="type" value="= 1" type="submit" class="btn btn-success ">Pregledaj</button>
+                                    <button name="type" value="= 1" type="submit" class="btn btn-info ">Pregledaj</button>
                                 </form>
                                 
                             </div>
@@ -99,7 +99,7 @@
                     </div>
                
                <div class="col-md-3 col-sm-3 col-xs-6">
-                        <div class="panel panel-danger">
+                        <div class="panel panel-info">
                             <div class="panel-heading">
                              <h4>OSTALIH RADOVA</h4> 
                             </div>
@@ -113,7 +113,7 @@
                             </div>
                             <div class="panel-footer">
                                 <form method="post" action="<?php echo base_url(); ?>index.php/welcome/browseFromHome">
-                                    <button type="submit" name="type" value="NOT IN (1,2,3)" class="btn btn-danger ">Pregledaj</button>
+                                    <button type="submit" name="type" value="NOT IN (1,2,3)" class="btn btn-info ">Pregledaj</button>
                                 </form>
                             </div>
                         </div>

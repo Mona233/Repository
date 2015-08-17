@@ -54,7 +54,7 @@ class Browse_model extends MY_Model{
                                             <td>'.$discipline[$i]->course.'</td>
                                             <td>
                                                 <form method="POST" action="'.base_url().'index.php/welcome/disciplinedownload">
-                                            <button type="submit" class="btn btn-success" name="disciplinesubmit" value="'.$discipline[$i]->id.'">Preuzmi</button>
+                                            <button type="submit" class="btn btn-info" name="disciplinesubmit" value="'.$discipline[$i]->id.'">Preuzmi</button>
                                                 </form>
                                             </td>
                                         </tr>';
@@ -121,7 +121,7 @@ class Browse_model extends MY_Model{
                                             <td>'.$courses[$i]->course.'</td>
                                             <td>
                                                 <form method="POST" action="'.base_url().'index.php/welcome/coursedownload">
-                                            <button type="submit" class="btn btn-success" name="coursesubmit" value="'.$courses[$i]->id.'">Preuzmi</button>
+                                            <button type="submit" class="btn btn-info" name="coursesubmit" value="'.$courses[$i]->id.'">Preuzmi</button>
                                                 </form>
                                             </td>
                                         </tr>';

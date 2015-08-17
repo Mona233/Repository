@@ -71,7 +71,7 @@
                                     </div><br><br>
                     </div>
                      
-                     <button type="submit" class="btn btn-success" id="search">Pretraži repozitorij</button>
+                     <button type="submit" class="btn btn-info" id="search">Pretraži repozitorij</button>
                      <!--</form>-->
                      
                  </div>

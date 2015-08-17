@@ -76,7 +76,7 @@ class Search_model extends MY_Model{
                                             <td>'.$get[$i]->course.'</td>
                                             <td>
                                                 <form method="POST" action="'.base_url().'index.php/welcome/searchdownload">
-                                            <button type="submit" class="btn btn-success" name="searchsubmit" value="'.$get[$i]->id.'">Preuzmi</button>
+                                            <button type="submit" class="btn btn-info" name="searchsubmit" value="'.$get[$i]->id.'">Preuzmi</button>
                                                 </form>
                                             </td>
                                             

@@ -48,7 +48,7 @@
                                             <td><?= $type[$i]->course ?></td>
                                             <td>
                                                 <form method="POST" action="<?php echo base_url();?>index.php/welcome/typedownload">
-                                                    <button type="submit" class="btn btn-success" name="typesubmit" value="<?php echo $type[$i]->id ?>">Preuzmi</button>
+                                                    <button type="submit" class="btn btn-info" name="typesubmit" value="<?php echo $type[$i]->id ?>">Preuzmi</button>
                                                 </form>
                                             </td>
                                         </tr>

@@ -16,7 +16,7 @@
              <div class="row text-center pad-row">
             
                  <div class="ibox-content">
-                     <h4>U izborniku odaberite disciplinu iz koje želite pregledati radove. Rezultati će biti prikazani u tablici
+                     <h4>U izbornicima odaberite kriterije prema kojima želite pregledati radove. Rezultati će biti prikazani u tablici
                      iz koje je moguće vidjeti podatke o svakom radu, ali i preuzeti rad na svoje računalo. Tablica omogućava i dodatno
                      pretraživanje preko polja 'Search' te 
                      sortiranje radova prema bilo kojem od stupaca klikom na zaglavlje stupca.</h4><br><br>
@@ -46,16 +46,10 @@
 <!-- ending discipline browsing, startin course browsing -->
 
 
-<section >
+
              <div class="container">
              <div class="row text-center pad-row">
-            
-                 <div class="ibox-content">
-                     <h4>U izborniku odaberite kolegij iz kojega želite pregledati radove. Rezultati će biti prikazani u tablici
-                     iz koje je moguće vidjeti podatke o svakom radu, ali i preuzeti rad na svoje računalo. Tablica omogućava i dodatno
-                     pretraživanje preko polja 'Search' te 
-                     sortiranje radova prema bilo kojem od stupaca klikom na zaglavlje stupca.</h4><br><br>
-                     
+        
                      <div class="form-group"><label class="col-lg-2 control-label">Kolegij</label>
                                     <div class="col-lg-10">
                                         <select class="form-control" id="course" style="width: 100%;" name="course">
@@ -66,8 +60,7 @@
                                         </select>
                                     </div><br><br>
                     </div>
-                     
-                 </div>
+                 
              
             </div>
                  
@@ -76,7 +69,8 @@
                     </div>
          
                  </div>
-         </section>
+
+       
 
 
 <script>

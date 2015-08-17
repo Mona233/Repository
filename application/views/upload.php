@@ -92,7 +92,7 @@
                           </div><br><br>
                      </div>
                      
-                      <button type="submit" class="btn btn-success" id="submit" name="submit" value='upload' >Dodaj rad</button>
+                      <button type="submit" class="btn btn-info" id="submit" name="submit" value='upload' >Dodaj rad</button>
                      
                 </form>
                  </div>
@@ -101,66 +101,4 @@
                 
                  </div>
          </section>
-<!--<script>
-    $(document).ready(function () {
-        
-       $('#discipline').on('change', function(e){
-            e.preventDefault();
-            discipline = $('#discipline').val();
-            //console.log(discipline);
-            });
-            
-      $('#course').on('change', function(e){
-            e.preventDefault();
-            course = $('#course').val();
-            //console.log(course);
-            });
-            
-       $('#type').on('change', function(e){
-            e.preventDefault();
-            type = $('#type').val();
-            //console.log(course);
-            });
-            
-            
-        $('#submit').on('click', function(e){
-            e.preventDefault();
-            
-//            title = $('#title').val();
-//            author = $('#author').val();
-//            date = $('#date').val();
-//            mentor = $('#mentor').val();
-//            summary= $('#summary').val();
-//            keywords = $('#keywords').val();
-            course = $('#course').val();
-//            newCourse = $('#newCourse').val();
-//            upload = $('#upload').val();
-            discipline = $('#discipline').val();
-            type = $('#type').val();
-            
-            //console.log(disciplineID);
-            
-//             $.ajax({
-//                type: 'POST',
-//                url: base_url + 'welcome/upload',
-//                data: {
-//                    discipline: discipline,
-////                    title: title,
-////                    author: author,
-////                    date: date,
-////                    mentor: mentor,
-////                    summary: summary,
-////                    keywords: keywords,
-//                    course: course,
-////                    newCourse: newCourse,
-////                    upload: upload,
-//                    type: type
-//                },
-//                success: function (msg) {
-//                console.log("success");
-//            }
-//            });
-        });
-        
-    });
- </script>-->
+
