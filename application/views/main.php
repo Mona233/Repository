@@ -13,7 +13,8 @@
     <!-- FONTAWESOME STYLE CSS -->
     <link href="<?=base_url();?>assets/css/font-awesome.min.css" rel="stylesheet" />
     <!-- CUSTOM STYLE CSS -->
-    <link href="<?=base_url();?>assets/css/style.css" rel="stylesheet" />    
+    <link href="<?=base_url();?>assets/css/style.css" rel="stylesheet" />   
+    
     <!-- GOOGLE FONT -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
     <!--DATA TABLE-->

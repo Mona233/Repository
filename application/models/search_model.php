@@ -9,7 +9,7 @@ class Search_model extends MY_Model{
  public function query($title,$author,$mentor,$keywords,$summary,$disc,$course,$date){
      
      $data = array();
-//     if ($date != '') {$data['date'] = $date;}
+     
      if ($title != '') {$data['title'] = $title;}
      if ($author != '') {$data['author'] = $author;}
      if ($mentor != '') {$data['mentor'] = $mentor;}
@@ -17,11 +17,10 @@ class Search_model extends MY_Model{
      if ($course != '') {$data['course'] = $course;}
      if ($summary != '') {$data['summary'] = $summary;}
      if ($disc != '') {$data['discipline'] = $disc;}
-     if ($disc != '') {$data['date'] = $disc;}
+     if ($date != '') {$data['date'] = $date;}
 
  
- //var_dump($data);  
-//   if ($workType != '') {$data['type'] = $workType;}
+    //var_dump($data);
   
     if (!empty($data)){
         
@@ -70,13 +69,35 @@ class Search_model extends MY_Model{
                                             <td>'.$get[$i]->date.'</td>
                                             <td>'.$get[$i]->typename.'</td>
                                             <td>'.$get[$i]->mentor.'</td>
-                                            <td style="text-align: center;">'.$get[$i]->summary.'</td>
+                                            <td>'.substr($get[$i]->summary, 0, 200). '...
+                                                    <div class="text-center">
+                                                    <a href="#" data-toggle="modal" data-target="#summary'.$get[$i]->id.'">
+                                                       Više
+                                                    </a>
+                                                </div>
+                                                <div class="modal inmodal fade" id="summary'.$get[$i]->id.'" tabindex="-1" role="dialog"  aria-hidden="true">
+                                                    <div class="modal-dialog modal-sm">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                                                <h4 class="modal-title">Sažetak</h4>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <p>'.$get[$i]->summary.'</p>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-primary" data-dismiss="modal">Zatvori</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>    
+                                            </td>
                                             <td>'.$get[$i]->keywords.'</td>
                                             <td>'.$get[$i]->discname.'</td>
                                             <td>'.$get[$i]->course.'</td>
                                             <td>
-                                                <form method="POST" action="'.base_url().'index.php/welcome/searchdownload">
-                                            <button type="submit" class="btn btn-info" name="searchsubmit" value="'.$get[$i]->id.'">Preuzmi</button>
+                                                <form method="POST" action="'.base_url().'index.php/welcome/download">
+                                            <button type="submit" class="btn btn-primary" name="searchsubmit" value="'.$get[$i]->id.'">Preuzmi</button>
                                                 </form>
                                             </td>
                                             

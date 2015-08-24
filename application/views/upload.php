@@ -63,15 +63,16 @@
                      <div class="form-group"><label class="col-lg-2 control-label">Kolegij</label>
                                     <div class="col-lg-10">
                                         <select class="form-control" id="course" style="width: 100%;" name="course">
-                                            <option value="">Odaberite već postojeći kolegij ili u iduće polje dodajte novi</option>
+                                            <option value="">Odaberite već postojeći kolegij ili dodajte novi</option>
                                              <?php for($i=0; $i<count($course); $i++) {?>
                                              <option onclick="CourseID(<?= html_escape($course[$i]->id); ?>)" value="<?= html_escape($course[$i]->id); ?>" name="course" id="course"><?= html_escape($course[$i]->title); ?></option>
                                              <?php } ?>
                                         </select>
-                                    </div><br><br>
+                                    </div>
+                         <br><br><a href="javascript:toggleDiv('hidden');" class="btn btn-primary">Dodaj kolegij</a><br>
                     </div>
                      
-                     <div class="form-group"><label class="col-lg-2 control-label">Naziv novog kolegija</label>
+                     <div class="form-group" hidden="" id="hidden"><label class="col-lg-2 control-label">Naziv novog kolegija</label>
                          <div class="col-lg-10" ><input type="text" class="form-control" name="newCourse" id="newCourse"> 
                           </div><br><br>
                      </div>
@@ -91,10 +92,12 @@
                        <div class="col-lg-10" ><input required="" value="" type='file' size='20' name="upload" id="upload"> 
                           </div><br><br>
                      </div>
-                     
-                      <button type="submit" class="btn btn-info" id="submit" name="submit" value='upload' >Dodaj rad</button>
+                     <table><tr>
+                      <button type="submit" class="btn btn-primary" id="submit" name="submit" value='upload' >Dodaj rad</button>
                      
                 </form>
+                     <form action="<?php echo base_url();?>index.php/welcome"><button type="submit" class="btn btn-danger">Odustani</button></form>
+                     </tr></table>
                  </div>
              
             </div>
@@ -102,3 +105,10 @@
                  </div>
          </section>
 
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script type="text/javascript">
+ function toggleDiv(divId) {
+   $("#"+divId).toggle();
+ }
+</script>

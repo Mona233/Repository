@@ -17,6 +17,9 @@ class Welcome extends CI_Controller {
          $data['doktorski'] = $doktorski;
          $ostali = $this->Work_model->getAllOstali();
          $data['ostali'] = $ostali;
+         
+         $last = $this->Work_model->getLastAdded();
+         $data['last'] = $last;
        
 	 $view = $this->load->view('home', $data, true);
          $data['body'] = $view;
@@ -180,40 +183,20 @@ class Welcome extends CI_Controller {
      $data = file_get_contents($file_path_url); // Read the file's contents
      force_download($file_name, $data);
      
-    }
-    
-    
- /**
- * when 'Preuzmi' on searching is clicked, download the file
- */
- public function searchdownload() {
-     //catch work id when button is clicked
-     $id = $this->input->post('searchsubmit');
-    
-     //based on that id, select all data about that particular work
-     $this->load->model('Work_model'); 
-     $work = $this->Work_model->getAllWork($id);
-     
-     //from aray of object get arry of strings
-     $var1 = array_map(function ($object) { return $object->path; }, $work);
-  
-     //define parameters for force download
-     $file_path_url = 'http://repository.zz.mu/assets/radovi/' .$var1[0];
-     $file_name = $var1[0];
-     
-//     echo $file_path_url;
-     $data = file_get_contents($file_path_url); // Read the file's contents
-     force_download($file_name, $data);
-     
-    }
-    
+ }
+        
  /**
  * when 'Preuzmi' on home browsing is clicked, download the file
  */
- public function typedownload() {
+ public function download() {
      //catch work id when button is clicked
-     $id = $this->input->post('typesubmit');
-    
+     if (!empty(($this->input->post('typesubmit')))){
+        $id = $this->input->post('typesubmit');}
+    elseif (!empty (($this->input->post('workid')))) {
+        $id = $this->input->post('workid');}
+    elseif (!empty (($this->input->post('searchsubmit')))) {
+        $id = $this->input->post('searchsubmit');}
+        
      //based on that id, select all data about that particular work
      $this->load->model('Work_model'); 
      $work = $this->Work_model->getAllWork($id);
@@ -338,5 +321,6 @@ class Welcome extends CI_Controller {
                 $data['body'] = $view;
                 $this->load->view('main', $data);
                 }
-      }  
+      }
+
 }

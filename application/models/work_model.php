@@ -77,10 +77,19 @@ class Work_model extends MY_Model{
   public function getWorkByType($id){
       $query = "SELECT work.*, type_of_work.title AS typename, disciplines.title AS discname, courses.title AS course FROM work JOIN type_of_work ON work.type = type_of_work.id
                                   JOIN disciplines ON work.discipline = disciplines.id 
-                                  JOIN courses ON work.course = courses.id where type ".$id."";
+                                  JOIN courses ON work.course = courses.id where work.type ".$id."";
       $result = $this->db->query($query);
       return $result->result();
       
+  }
+  
+  /**
+   * get last added work
+   */
+  public function getLastAdded(){
+      $query = "SELECT * FROM work ORDER BY timestamp DESC LIMIT 1";
+      $result = $this->db->query($query);
+      return $result->result();
   }
     
 }

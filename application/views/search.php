@@ -16,7 +16,6 @@
              <div class="row text-center pad-row">
             
                  <div class="ibox-content">
-<!--                     <form method="post" action="<?php //echo base_url(); ?>index.php/welcome/pickupData">-->
                      <div class="form-group"><label class="col-lg-2 control-label">Naslov</label>
                           <div class="col-lg-10" ><input type="text" class="form-control" name="title" id="title"> 
                           </div><br><br>
@@ -29,14 +28,6 @@
                           <div class="col-lg-10" > <input type="text" class="form-control" name="date" value="" placeholder = "npr. 2015-01-01" id="date"> 
                           </div><br><br>
                      </div>
-<!--                     <div class="form-group"><label class="col-lg-2 control-label">Vrsta rada</label>
-                         <div class="col-lg-8">
-                         <?php //foreach ($type as $row){?>
-                             <input class="checkbox-inline" onclick="addID(<? =html_escape($row->id); ?>);" type="checkbox" name="type" value="<? = html_escape($row->id);?>" id="type">
-                             <? = $row->title;?>      
-                         <?php //} ?>
-                         </div>
-                     </div><br><br>-->
                      <div class="form-group"><label class="col-lg-2 control-label">Mentor</label>
                          <div class="col-lg-10" ><input type="text" placeholder="Molimo, unesite samo ime i/ili prezime, titula nije potrebna" class="form-control" name="mentor" id="mentor"> 
                           </div><br><br>
@@ -70,12 +61,13 @@
                                         </select>
                                     </div><br><br>
                     </div>
-                     
-                     <button type="submit" class="btn btn-info" id="search">Pretraži repozitorij</button>
-                     <!--</form>-->
-                     
+                   <table><tr>
+                     <button type="submit" class="btn btn-primary" id="search">Pretraži repozitorij</button>
                  </div>
-             
+                 <form action="<?php echo base_url();?>index.php/welcome">
+                    <button type="submit" class="btn btn-danger" id="search">Odustani</button>
+                 </form>
+                  </tr></table>
             </div>
                  
                  <div class="ibox-content myData">

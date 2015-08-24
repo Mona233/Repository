@@ -45,14 +45,13 @@
  *                      by the web server
  */
 		
-$config['hosts'] = array('LDAP://ldap.ffzg.hr:636/uid={0}');
-$config['ports'] = array(389);
+$config['hosts'] = 'LDAP://ldap.ffzg.hr:636/uid={0}';
+$config['ports'] = 389;
 $config['basedn'] = 'dc=ffzg,dc=hr';
 $config['login_attribute'] = 'username';
 $config['proxy_user'] = '';
 $config['proxy_pass'] = '';
-//$config['roles'] = array(1 => 'Student',
-//    5 => 'Profesors');
+$config['roles'] = array(1 => 'Student',
+    2 => 'Profesor');
 $config['member_attribute'] = 'memberUid';
 //$config['auditlog'] = 'application/logs/audit.log';  // Some place to log attempted logins (separate from message log)
-?>

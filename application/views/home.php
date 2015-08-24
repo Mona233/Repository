@@ -37,7 +37,7 @@
            <div class="row text-center pad-row" >
                
             <div class="col-md-3 col-sm-3 col-xs-6">
-                        <div class="panel panel-info">
+                        <div class="panel panel-success">
                             <div class="panel-heading">
                              <h4>ZAVRŠNIH RADOVA</h4> 
                             </div>
@@ -51,7 +51,7 @@
                             </div>
                             <div class="panel-footer">
                                 <form method="post" action="<?php echo base_url(); ?>index.php/welcome/browseFromHome">
-                                    <button type="submit" name="type" value="= 3" class="btn btn-info ">Pregledaj</button>
+                                    <button type="submit" name="type" value="= 3" class="btn btn-success ">Pregledaj</button>
                                 </form>
                             </div>
                         </div>
@@ -71,7 +71,7 @@
                             </div>
                             <div class="panel-footer">
                                 <form method="post" action="<?php echo base_url(); ?>index.php/welcome/browseFromHome">
-                                    <button name="type" value="= 1" type="submit" class="btn btn-info ">Pregledaj</button>
+                                    <button name="type" value="= 1" type="submit" class="btn btn-primary ">Pregledaj</button>
                                 </form>
                                 
                             </div>
@@ -79,7 +79,7 @@
                     </div>
                
                 <div class="col-md-3 col-sm-3 col-xs-6">
-                        <div class="panel panel-info">
+                        <div class="panel panel-success">
                             <div class="panel-heading">
                              <h4>DOKTORSKIH RADOVA</h4> 
                             </div>
@@ -92,7 +92,7 @@
                             </div>
                             <div class="panel-footer">
                                <form method="post" action="<?php echo base_url(); ?>index.php/welcome/browseFromHome">
-                                   <button type="submit" name="type" value=" = 2" class="btn btn-info ">Pregledaj</button>
+                                   <button type="submit" name="type" value=" = 2" class="btn btn-success ">Pregledaj</button>
                                </form>
                             </div>
                         </div>
@@ -113,7 +113,7 @@
                             </div>
                             <div class="panel-footer">
                                 <form method="post" action="<?php echo base_url(); ?>index.php/welcome/browseFromHome">
-                                    <button type="submit" name="type" value="NOT IN (1,2,3)" class="btn btn-info ">Pregledaj</button>
+                                    <button type="submit" name="type" value="NOT IN (1,2,3)" class="btn btn-primary ">Pregledaj</button>
                                 </form>
                             </div>
                         </div>
@@ -124,9 +124,31 @@
         </section>
                       
                  </div>
-                
             </div>
+         </div>
+   
+           <div class="row text-center pad-bottom" >
+            <div class="col-md-12">
+                <i class="fa fa-5x"></i>
+                <h4><strong><em>Zadnje dodan rad u repozitorij:</em></strong></h4>
+            </div>
+           </div>
+                
+      
+           <div class="row   alert alert-info" >
+                 <div class="col-md-8 col-sm-8">
+                      <?php for($i=0; $i<count($last); $i++) {?>
+                      <h3><?= html_escape($last[$i]->title); ?></h3>
+                      
+                 </div>
                
+                 <div class="col-md-4 col-sm-4" style="padding-top: 15px;">
+                     <form method="POST" action="<?php echo base_url(); ?>index.php/welcome/download">
+                         <button class="btn btn-primary btn-lg" name="workid" value="<?= html_escape($last[$i]->id); ?>">Preuzmite rad</button> 
+                     </form>
+                 </div> 
+                    <?php } ?>
                </div>
-        </div>
+                <br><br>
+      </div>
       
