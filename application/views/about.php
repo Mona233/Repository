@@ -18,11 +18,11 @@
              <div class="row text-center pad-row">
             
                             <p>
-                                Repozitorij Filozofskog fakulteta je digitalna zbirka koja okuplja sve radove kojima su autori djelatnici ili studenti Filozofskog fakulteta i koji nastaju kao rezultat istraživačkog i obrazovnog procesa na Fakultetu. To mogu biti: diplomski, završni, seminarski, doktorski radovi, članci u časopisima ili zbornicima radova, knjige ili poglavlja u knjigama, ocjenski radovi, prezentacije, posteri, rukopisi, izvještaji, nastavni materijali, istraživački podaci, multimedijska i audio-vizualna građa i ostale vrste sadržaja.
+                                Repozitorij Filozofskog fakulteta je digitalna zbirka koja okuplja sve radove kojima su autori djelatnici ili studenti Filozofskog fakulteta i koji nastaju kao rezultat istraživačkog i obrazovnog procesa na Fakultetu. To mogu biti: diplomski, završni, seminarski, doktorski radovi, članci u časopisima ili zbornicima radova, knjige ili poglavlja u knjigama, ocjenski radovi, prezentacije, posteri, rukopisi, izvještaji, nastavni materijali, istraživački podaci, multimedijska i audio-vizualna građa i ostale vrste sadržaja.<br>
 
-                                Repozitorij je osnovala i o njemu se brine Knjižnica FF-a. Dio radova u repozitoriju su otvoreno dostupni (besplatno i neograničeno javno dostupni), a dio je dostupan samo korisnicima Knjižnice uz autorizaciju AAI@EduHR identitetom, ovisno o odluci autora rada. Radove u Repozitorij mogu pohraniti sami znanstvenici ili studenti, ili se mogu obratiti knjižničarima.
+                                Repozitorij je osnovala i o njemu se brine Knjižnica FF-a. Radovi su dostupni svim članovima hrvatske akademske zajednice, što znači da trebaju imati svoj AAI@EduHR račun. Radove u Repozitorij mogu pohraniti svi koji imaju pristup repozitoriju, međutim, svaki rad proći će testiranje na plagijarizam. <br> U slučaju audiovizualnih i ostalih netekstualnih radova, oni će biti analizirani od strane knjižničara.
 
-                                Knjižnica pruža podršku pri unosu, savjetuje u pitanjima autorskih prava i verzija dokumenata i kontrolira kvalitetu bibliografskih podataka, ali ne odgovara za sadržaj pohranjenih dokumenata.
+                                Knjižnica pruža podršku pri unosu, <br> savjetuje u pitanjima autorskih prava i verzija dokumenata i kontrolira kvalitetu bibliografskih podataka, ali ne odgovara za sadržaj pohranjenih dokumenata. <br> Nadamo se da će Vam radovi u repozitoriju biti od pomoći u Vašem akademskom radu, <br> no ukoliko ste ovdje i samo kako biste pregledali stvaralaštvo Filozofskog fakulteta u Zagrebu, dobro ste došli!
 
                                 <br><br>
 

@@ -21,6 +21,7 @@ class Welcome extends CI_Controller {
          $last = $this->Work_model->getLastAdded();
          $data['last'] = $last;
        
+         //put home view inside the main view
 	 $view = $this->load->view('home', $data, true);
          $data['body'] = $view;
          $this->load->view('main', $data);
@@ -69,19 +70,16 @@ class Welcome extends CI_Controller {
   */
  public function pickupData(){
     
-    $date = $this->input->post('date');
-//    $converted = new DateTime($convert);
-    
-    
+    $date = $this->input->post('date');;
     $title = $this->input->post('title');
     $author = $this->input->post('author');
-//    $date = $converted->format('Y-m-d');
     $mentor = $this->input->post('mentor');
     $keywords = $this->input->post('keywords');
     $summary = $this->input->post('summary');
     $disc = $this->input->post('discipline');
     $course = $this->input->post('course');
     
+    //send data to model's two functions
     $this->load->model('Search_model');
     $this->Search_model->query($title,$author,$mentor,$keywords,$summary,$disc,$course,$date);
     $this->Search_model->dataLoad($title,$author,$mentor,$keywords,$summary,$disc,$course,$date);
@@ -262,6 +260,8 @@ class Welcome extends CI_Controller {
  * upload new work
  */
  public function upload(){
+     
+     //configuration for upload
     $config = array(
     'upload_path' => "./uploads/",
     'allowed_types' => "gif|jpg|png|jpeg|pdf|doc|docx|txt|mp3|mp4|zip|rar",
@@ -271,6 +271,7 @@ class Welcome extends CI_Controller {
     'max_width' => "1024"
     );
     
+    //create folder for upload if it doesn't exist
     if (!file_exists($config['upload_path'])) {
           if (!mkdir($config['upload_path'], 0777, true)) {
           die('Failed to create folders...');
@@ -284,7 +285,7 @@ class Welcome extends CI_Controller {
         $data['body'] = $view;
         $this->load->view('main', $data);
         
-        //insert into database
+        //if file is uploaded, insert users input information into database
         $this->load->model('Work_model');
         $work = new Work_model();
         $new = $this->input->post('newCourse');
@@ -303,6 +304,7 @@ class Welcome extends CI_Controller {
         $file = str_replace('', '_', $file_name);
         $work->path = $file;
         
+        //if new course is selected and created, choose last inserted id
            if(!empty($new)){
             $this->load->model('Course_model');
             $course = new Course_model();

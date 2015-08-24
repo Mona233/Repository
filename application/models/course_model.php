@@ -9,7 +9,7 @@ class Course_model extends MY_Model{
     public $title;
   
   /**
-   * catch all disciplines
+   * catch all courses
    */  
     public function getAllCourses(){
         $query = "SELECT * FROM courses";

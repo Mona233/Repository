@@ -4,7 +4,7 @@ class Browse_model extends MY_Model{
     
   
   /**
-   * browse by discipline query
+   * browse by discipline - query
    */  
  public function query2($disc){
      $query = "SELECT work.*, type_of_work.title AS typename, disciplines.title AS discname, courses.title AS course FROM work JOIN type_of_work ON work.type = type_of_work.id
@@ -17,7 +17,9 @@ class Browse_model extends MY_Model{
      $discipline = $this->db->query($query);
      return $discipline->result();
   }
+ 
   
+  //load datatable when discipline is selected
   public function dataLoad2($disc){
     $discipline = $this->query2($disc);
     
@@ -107,6 +109,7 @@ class Browse_model extends MY_Model{
   }
   
   
+  //load datatable when course is selected
   public function dataLoad3($course){
      $courses = $this->query3($course);
     
