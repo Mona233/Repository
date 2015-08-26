@@ -111,7 +111,7 @@
 
             </div>
 
-            <?php if ($this->uri->total_segments() == 0){?>
+<!-- -->   <?php if ($this->uri->total_segments() == 0){?>
 
             <div class="navbar-collapse collapse">
 

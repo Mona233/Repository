@@ -147,61 +147,7 @@
         });
         
     });
-//        
-//        
-//        $('#type').on('click', function(e){
-//            e.preventDefault();
-//            typeID = $('#type').val();
-//            console.log(typeID);
-//            
-//             $.ajax({
-//                type: 'POST',
-//                url: base_url + 'welcome/search',
-//                data: {
-//                    id: typeID
-//                },
-//                success: function (data) {
-////                    console.log(data);
-//                }
-//            });
-//        });
-//    });
-//    
-// var ids = [];
-// var i = [];
-// 
-// //when type is checked in, collect its id, write 'dodajem' in console, when unchecked, write 'brisem element'
-//function addID(id) {
-//    var flag = 0;
-//    var index = ids.indexOf(id);
-//    if (index !== -1) {
-//        console.log('brisem element br.' + i + 'vrijednost: ' + ids[i]);
-//        ids.splice(index, 1);
-//        flag = 1;
-//    }
-//    if (!flag) {
-//        console.log('dodajem ' + id);
-//        ids [ids.length] = id;
-//    }
-//}
-////send collected ids in 'ids' array to the php script in controller
-//function sendArrayToScript() {
-////    alert(JSON.stringify(mona));
-//    $.ajax({
-//        type: 'POST',
-//        url: base_url + 'welcome/search',
-//        datatype: 'json',
-//        data: {
-//            ids: JSON.stringify(ids)
-//        },
-//        success: function (data) {
-//            console.log(data);
-//            
-//        window.location.reload();
-//        }
-//    });
-//}
-     
+
  
 
 </script>

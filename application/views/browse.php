@@ -43,7 +43,7 @@
                  </div>
 </section>
 
-<!-- ending discipline browsing, startin course browsing -->
+<!-- ending discipline browsing, starting course browsing --------->
 
 
 

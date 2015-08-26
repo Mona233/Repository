@@ -50,7 +50,7 @@ $autoload['packages'] = array();
 | Prototype:
 |
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
-*/
+*///////////
 
 $autoload['libraries'] = array('form_validation', 'database', 'email', 'upload', 'zip', 'auth_ldap', 'table');
 

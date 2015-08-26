@@ -86,6 +86,7 @@
                  </div>
 </section>
 <script>
+    //
     $('.dataTables-example').dataTable({
             "pageLength": 10,
             responsive: true,

@@ -130,7 +130,7 @@
            <div class="row text-center pad-bottom" >
             <div class="col-md-12">
                 <i class="fa fa-5x"></i>
-                <h4><strong><em>Posljednji rad dodan u repozitorij</em></strong></h4>
+                <h4><strong><em>Posljednji rad dodan u repozitorij:</em></strong></h4>
             </div>
            </div>
                 
