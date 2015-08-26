@@ -13,6 +13,10 @@
 
 <section >
              <div class="container">
+             <h4 style="text-align: center;">Forma za pretraživanje omogućava jednostavno i složeno pretraživanje, što znači da možete odabrati samo jedan
+                   kriterij i pretražiti repozitorij po njemu, ili pak odabrati više njih. Rezultati će biti prikazani unutar tablice
+                 sa svim podacima koji su Vam potrebni o radovima. Tablica sadrži i polje za dodatno pretraživanje, a moguće
+                je i sortirati rezultate prema bilo kojem podatku u zaglavlju tablice.</h4><br><br>
              <div class="row text-center pad-row">
             
                  <div class="ibox-content">

@@ -147,7 +147,7 @@ class Welcome extends CI_Controller {
      $var1 = array_map(function ($object) { return $object->path; }, $work);
   
      //define parameters for force download
-     $file_path_url = 'http://repository.zz.mu/assets/radovi/' .$var1[0];
+     $file_path_url = 'http://repository.zz.mu/uploads/' .$var1[0];
      $file_name = $var1[0];
      
 //     echo $file_path_url;
@@ -174,7 +174,7 @@ class Welcome extends CI_Controller {
      $var1 = array_map(function ($object) { return $object->path; }, $work);
   
      //define parameters for force download
-     $file_path_url = 'http://repository.zz.mu/assets/radovi/' .$var1[0];
+     $file_path_url = 'http://repository.zz.mu/uploads/' .$var1[0];
      $file_name = $var1[0];
      
 //     echo $file_path_url;
@@ -184,7 +184,7 @@ class Welcome extends CI_Controller {
  }
         
  /**
- * when 'Preuzmi' on home browsing is clicked, download the file
+ * when 'Preuzmi' on homebrowsing/lastadded/search is clicked, download the file
  */
  public function download() {
      //catch work id when button is clicked
@@ -203,7 +203,7 @@ class Welcome extends CI_Controller {
      $var1 = array_map(function ($object) { return $object->path; }, $work);
   
      //define parameters for force download
-     $file_path_url = 'http://repository.zz.mu/assets/radovi/' .$var1[0];
+     $file_path_url = 'http://repository.zz.mu/uploads/' .$var1[0];
      $file_name = $var1[0];
      
 //     echo $file_path_url;
@@ -261,7 +261,7 @@ class Welcome extends CI_Controller {
  */
  public function upload(){
      
-     //configuration for upload
+    //configuration for upload
     $config = array(
     'upload_path' => "./uploads/",
     'allowed_types' => "gif|jpg|png|jpeg|pdf|doc|docx|txt|mp3|mp4|zip|rar",
@@ -319,9 +319,30 @@ class Welcome extends CI_Controller {
           }else{
                 $error = array('error' => $this->upload->display_errors());
 //                var_dump($data);
-                $view = $this->load->view('upload',$error,TRUE);
+                $data['error'] = $error;
+
+                //get all work types
+                $this->load->model('TypeOfWork_model');
+     		$type = new TypeOfWork_model();
+     		$types = $type->getAllTypes();
+     		$data['type'] = $types;
+      
+      		//get all disciplines
+     		$this->load->model('Disciplines_model');
+     		$discipline = new Disciplines_model();
+     		$disciplines = $discipline->getAllDisciplines();
+     		$data['discipline'] = $disciplines;
+     
+     		//get all courses
+     		$this->load->model('Course_model');
+     		$course = new Course_model();
+     		$courses = $course->getAllCourses();
+     		$data['course'] = $courses;
+
+                $view = $this->load->view('upload',$data,TRUE);
                 $data['body'] = $view;
                 $this->load->view('main', $data);
+                
                 }
       }
 

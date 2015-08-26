@@ -1,17 +1,17 @@
-    <section id="home" class="text-center">
+<section id="home" class="text-center">
                          <div id="carousel-example" class="carousel slide" data-ride="carousel">
 
                     <div class="carousel-inner">
                        <div class="item active">
 
-                            <img src="<?=base_url();?>assets/img/ffzg1.jpg" alt="" />
+                            <img src="<?=base_url();?>assets/img/ffzg1.jpg" alt="" style="width: 100%; height: auto;" />
                             <div class="carousel-caption" >
                                 <h4 class="back-light">Dobrodošli na repozitorij radova Filozofskog fakulteta u Zagrebu</h4>
                             </div>
                         </div>
 
                         <div class="item">
-                            <img src="<?=base_url();?>assets/img/ffzg.jpg" alt="" />
+                            <img src="<?=base_url();?>assets/img/ffzg.jpg" alt="" style="width: 100%; height: auto;" />
                             <div class="carousel-caption ">
                                 <h4 class="back-light">Dobrodošli na repozitorij radova Filozofskog fakulteta u Zagrebu</h4>
                             </div>
@@ -20,7 +20,7 @@
 
                   <ol class="carousel-indicators">
                         <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example" data-slide-to="0"></li>
+                        <li data-target="#carousel-example" data-slide-to="1"></li>
                     </ol>
                 </div>
            
@@ -130,7 +130,7 @@
            <div class="row text-center pad-bottom" >
             <div class="col-md-12">
                 <i class="fa fa-5x"></i>
-                <h4><strong><em>Zadnje dodan rad u repozitorij:</em></strong></h4>
+                <h4><strong><em>Posljednji rad dodan u repozitorij</em></strong></h4>
             </div>
            </div>
                 
@@ -138,7 +138,7 @@
            <div class="row   alert alert-info" >
                  <div class="col-md-8 col-sm-8">
                       <?php for($i=0; $i<count($last); $i++) {?>
-                      <h3><?= html_escape($last[$i]->title); ?></h3>
+                      <h3>"<?= html_escape($last[$i]->title); ?>" </h3>
                       
                  </div>
                
@@ -151,4 +151,3 @@
                </div>
                 <br><br>
       </div>
-      

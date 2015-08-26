@@ -69,7 +69,7 @@
                                             <td><?= $type[$i]->discname ?></td>
                                             <td><?= $type[$i]->course ?></td>
                                             <td>
-                                                <form method="POST" action="<?php echo base_url();?>index.php/welcome/typedownload">
+                                                <form method="POST" action="<?php echo base_url();?>index.php/welcome/download">
                                                     <button type="submit" class="btn btn-primary" name="typesubmit" value="<?php echo $type[$i]->id ?>">Preuzmi</button>
                                                 </form>
                                             </td>
@@ -93,4 +93,3 @@
         });
 
 </script>
-

@@ -1,4 +1,4 @@
-<section id="home" class="head-main-img">
+﻿<section id="home" class="head-main-img">
          
                <div class="container">
            <div class="row text-center pad-row" >
@@ -16,6 +16,9 @@
              <div class="row text-center pad-row">
             
                  <div class="ibox-content">
+                 <h4 style="text-align: center;"> Ovdje možete predati svoj rad u repozitorij Filozofskog fakulteta. Potrebno je
+                  ispuniti sva polja forme. Kod odabira kolegija, nudi Vam se i mogućnost kreiranja novog kolegija ukoliko
+                  u bazi još uvijek nemamo onaj potreban za Vaš rad.</h4><br><br>
                      
                      
                 <form action="<?php echo base_url();?>index.php/welcome/upload" method="POST" enctype="multipart/form-data" >
