@@ -1,14 +1,17 @@
 <?php if ( ! defined('BASEPATH')) {exit('No direct script access allowed');}
 
-//by Mona//
-
-
 class Welcome extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
 	 */
 	public function index(){
+             $polje = $this->session->all_userdata();
+         
+            if ( !isset($polje['logged_in']) ){
+                redirect('/login');
+                return;
+            }
    
          $this->load->model('Work_model'); 
         
@@ -150,7 +153,7 @@ class Welcome extends CI_Controller {
      $var1 = array_map(function ($object) { return $object->path; }, $work);
   
      //define parameters for force download
-     $file_path_url = 'http://repository.zz.mu/uploads/' .$var1[0];
+     $file_path_url = 'http://www.monaspage.tk/uploads/' .$var1[0];
      $file_name = $var1[0];
      
 //     echo $file_path_url;
@@ -177,7 +180,7 @@ class Welcome extends CI_Controller {
      $var1 = array_map(function ($object) { return $object->path; }, $work);
   
      //define parameters for force download
-     $file_path_url = 'http://repository.zz.mu/uploads/' .$var1[0];
+     $file_path_url = 'http://www.monaspage.tk/uploads/' .$var1[0];
      $file_name = $var1[0];
      
 //     echo $file_path_url;
@@ -206,7 +209,7 @@ class Welcome extends CI_Controller {
      $var1 = array_map(function ($object) { return $object->path; }, $work);
   
      //define parameters for force download
-     $file_path_url = 'http://repository.zz.mu/uploads/' .$var1[0];
+     $file_path_url = 'http://www.monaspage.tk/uploads/' .$var1[0];
      $file_name = $var1[0];
      
 //     echo $file_path_url;
@@ -267,11 +270,9 @@ class Welcome extends CI_Controller {
     //configuration for upload
     $config = array(
     'upload_path' => "./uploads/",
-    'allowed_types' => "gif|jpg|png|jpeg|pdf|doc|docx|txt|mp3|mp4|zip|rar",
+    'allowed_types' => "pdf|doc|docx",
     'overwrite' => TRUE,
-    'max_size' => "5048000",
-    'max_height' => "768",
-    'max_width' => "1024"
+    'max_size' => "5048000"
     );
     
     //create folder for upload if it doesn't exist
@@ -292,6 +293,7 @@ class Welcome extends CI_Controller {
         $this->load->model('Work_model');
         $work = new Work_model();
         $new = $this->input->post('newCourse');
+		$polje = $this->session->all_userdata();
         
         $work->title = $this->input->post('title');
         $work->author = $this->input->post('author');
@@ -301,6 +303,7 @@ class Welcome extends CI_Controller {
         $work->summary = $this->input->post('summary');
         $work->discipline = $this->input->post('discipline');
         $work->type = $this->input->post('type');
+		$work->user = $polje['logged_in']['username'];
         
         $upload_data = $this->upload->data();
         $file_name = $upload_data['file_name'];
@@ -348,5 +351,6 @@ class Welcome extends CI_Controller {
                 
                 }
       }
+
 
 }

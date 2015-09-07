@@ -107,55 +107,29 @@
                     <span class="icon-bar"></span>
 
                 </button>
+				
+				
                  <img src="<?=base_url();?>assets/img/logo.jpg" alt="ffzg_logo" />
+			
 
             </div>
 
-<!-- -->   <?php if ($this->uri->total_segments() == 0){?>
+           
 
             <div class="navbar-collapse collapse">
-
                 <ul class="nav navbar-nav navbar-right">
-
-                    <li><a href="#">NASLOVNA</a></li>
-
-                    <li><a href="#">O REPOZITORIJU/KONTAKT</a></li>
-
-                    <li><a href="#">PRETRAŽIVANJE</a></li>
-
-                    <li><a href="#">PREGLEDAVANJE</a></li>
-
-                    <li><a href="#">DODAVANJE RADA</a></li>
-
-                    
-
-                </ul>
-
-            </div>
-
-            <?php } else { ?> 
-
-            <div class="navbar-collapse collapse">
-
-                <ul class="nav navbar-nav navbar-right">
-
-                    <li><a href="<?=base_url();?>index.php/welcome">NASLOVNA</a></li>
-
+                    <li><a href="<?=base_url();?>welcome">NASLOVNA</a></li>
                     <li><a href="<?=base_url();?>index.php/welcome/about">O REPOZITORIJU/KONTAKT</a></li>
-
+                     <?php if($this->session->userdata("logged_in")){ ?> 
                     <li><a href="<?=base_url();?>index.php/welcome/searchview">PRETRAŽIVANJE</a></li>
-
                     <li><a href="<?=base_url();?>index.php/welcome/browseview">PREGLEDAVANJE</a></li>
-
                     <li><a href="<?=base_url();?>index.php/welcome/uploadview">DODAVANJE RADA</a></li>
-
-                    
-
+                    <li><a href="<?=base_url();?>index.php/login/logout" style="text-align: center"><?=strtoupper($this->session->userdata("logged_in")['username'])?> <br>LOGOUT</a></li>
+                    <?php } ?>
                 </ul>
-
             </div>
 
-            <?php } ?>
+            
 
         </div>
 
